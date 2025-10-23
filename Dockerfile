@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 # Mount or copy artifacts & demographics at runtime:
 #   -v /host/model:/app/model
-#   -v /host/data:/app/data
+#   -v /host/data:/app/data  
 
 EXPOSE 8000
 # CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "app.main:app", \
