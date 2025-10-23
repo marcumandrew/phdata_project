@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FastAPI (Gunicorn)",
+      "type": "python",
+      "request": "launch",
+      "module": "gunicorn",
+      "args": [
+        "app.main:app",
+        "-k", "uvicorn.workers.UvicornWorker",
+        "-w", "12",                       
+        "-b", "0.0.0.0:8000",
+        "--timeout", "60",
+        "--keep-alive", "5",
+        "--graceful-timeout", "30",
+        "--max-requests", "5000",
+        "--max-requests-jitter", "500"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

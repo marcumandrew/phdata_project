@@ -1,0 +1,16 @@
+{
+  "name": "KC Housing API Dev",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "forwardPorts": [8000],
+  "postCreateCommand": "pip install -r requirements.txt",
+  "mounts": [
+    "source=${localWorkspaceFolder}/model,target=/app/model,type=bind",
+    "source=${localWorkspaceFolder}/data,target=/app/data,type=bind"
+  ],
+  "remoteEnv": {
+    "ARTIFACT_DIR": "/app/model",
+    "DEMOGRAPHICS_CSV": "/app/data/zipcode_demographics.csv"
+  }
+}

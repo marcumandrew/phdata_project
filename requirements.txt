@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+gunicorn==22.0.0
+pandas==2.2.2
+xgboost==2.0.3
+scikit-learn==1.5.1
+requests
+httpx
+folium 
+branca
