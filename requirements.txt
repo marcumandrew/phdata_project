@@ -8,3 +8,4 @@ requests
 httpx
 folium 
 branca
+matplotlib

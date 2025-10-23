@@ -3,6 +3,10 @@
   "build": {
     "dockerfile": "../Dockerfile"
   },
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter"        // optional, for notebooks
+  ],
   "forwardPorts": [8000],
   "postCreateCommand": "pip install -r requirements.txt",
   "mounts": [
